@@ -4,3 +4,12 @@
 
 ** Reied 1 practice
 ** Removed practice !!
+
+
+....reset!
+
+1. made 3 directories (01, 02, 03)
+
+2. Pulled a new copy from Github of /zoe
+
+3. Unpacked, 3 times, into 3 new directories.
