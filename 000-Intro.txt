@@ -14,5 +14,8 @@
 
 3. Unpacked, 3 times, into 3 new directories.
 
+New.
 
-4. Moved to New
+1. Added 00-MASTER-COPY, a side-copy of the 'real' version.
+
+DO NOT TOUCH THIS.
