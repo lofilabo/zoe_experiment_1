@@ -14,7 +14,6 @@
 
 3. Unpacked, 3 times, into 3 new directories.
 
-
 NOTES:
 
 The following are required....not always, but keep them in mind.....
@@ -34,14 +33,6 @@ the code for defining the commands (what you will need to change !!)
 
 tokenizer.h
           ^----NOTE, h and not c !!!!
-
-
-
-
-=======
-
-4. Moved to New
-
 
 
 
