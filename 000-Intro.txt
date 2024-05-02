@@ -13,3 +13,6 @@
 2. Pulled a new copy from Github of /zoe
 
 3. Unpacked, 3 times, into 3 new directories.
+
+
+4. Moved to New
