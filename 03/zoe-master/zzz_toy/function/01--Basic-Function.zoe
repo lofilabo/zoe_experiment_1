@@ -1,0 +1,39 @@
+HAI 1.2
+
+BTW most basic example
+HOW IZ I MAINUMBA YR INONE
+	VISIBLE INONE 
+IF U SAY SO
+
+BTW example - 2 inputs
+HOW IZ I MAINUMBB YR INONE21 AN YR INONE22 
+	VISIBLE INONE21
+	VISIBLE INONE22
+IF U SAY SO
+
+
+
+BTW example - 2 inputs & 1 return
+BTW return is caused by FOUND YR and 'recieved' by VISIBLE 
+HOW IZ I MAINUMBC YR INONE31 AN YR INONE32 AN YR INONE33 
+	VISIBLE INONE31
+	VISIBLE INONE32
+	VISIBLE INONE33
+	VISIBLE " "
+
+	BTW different things can be returned!
+	BTW	FOUND YR "77" 
+	FOUND YR 77
+IF U SAY SO
+
+I IZ MAINUMBA YR "1" MKAY
+I IZ MAINUMBB YR "4" AN YR "8" MKAY
+
+VISIBLE " "
+VISIBLE " "
+
+VISIBLE I IZ MAINUMBC YR 3 AN YR 9 AN YR 1 MKAY
+
+KTHXBYE
+
+BTW Ref: https://www.tutorialspoint.com/lolcode/lolcode_functions.htm
