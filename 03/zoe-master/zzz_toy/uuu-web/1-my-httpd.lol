@@ -7,8 +7,34 @@ OBTW
         profit?
     by Justin J. Meza, 2014
 
-1. http://127.0.0.1:13337/lol.html
-2. http://127.0.0.1:13337/1.html
+NOTES TO SELF:
+
+Finish Today.
+
+Basically able to have a reply to:
+	http://127.0.0.1:13337/poople
+which is:
+	hello there  poople
+
+
+Also, expected reply from 
+	http://127.0.0.1:13337/lol.html
+which is an 'actual' file
+
+NEXT TIME:
+	work on:
+		AN "Content-Length: 19:3:):3:)"...
+		AN "hello there  :{name}:3:)" MKAY
+
+	and try to work with an 'actual' {name}
+	ie,
+	http://127.0.0.1:13337/poople <--- {name} Is 'poople'
+	IMPORTANT:
+	at this stage, we GUESS the LENGTH of the string.
+
+TEST WITH:
+http://127.0.0.1:13337/01234a
+
 
 TLDR
 HAI 1.4
@@ -59,13 +85,14 @@ HAI 1.4
         I HAS A file ITZ I IZ STDIO'Z OPEN YR name AN YR "r" MKAY
         I IZ STDIO'Z DIAF YR file MKAY, O RLY?
         YA RLY
-            VISIBLE "FIEL REPLACED"
+		BTW lots of tinkering here!!
+            	VISIBLE "FIEL REPLACED"
             	reply R SMOOSH "HTTP/1.1 200 OK:3:)"...
 		AN "Server: httpd.lol/0.1 (lci):3:)"...
 		AN "Context-Type: text/html:3:)"...
 		AN "Content-Length: 19:3:):3:)"...
 		AN "hello there  :{name}:3:)" MKAY
-NO WAI
+	NO WAI
             VISIBLE "FIEL FOUND!"
             I HAS A data ITZ I IZ STDIO'Z LUK YR file AN YR 1024 MKAY
             I HAS A len ITZ I IZ STRING'Z LEN YR data MKAY
