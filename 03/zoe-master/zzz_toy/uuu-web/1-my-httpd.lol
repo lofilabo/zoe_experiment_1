@@ -87,6 +87,11 @@ HAI 1.4
         YA RLY
 		BTW lots of tinkering here!!
             	VISIBLE "FIEL REPLACED"
+		
+		BTW Idea
+		BTW I HAS A len ITZ I IZ STRING'Z LEN YR data MKAY
+		BTW use this to figure out the Length is replace 19 in  AN "Content-Length: 19:3
+
             	reply R SMOOSH "HTTP/1.1 200 OK:3:)"...
 		AN "Server: httpd.lol/0.1 (lci):3:)"...
 		AN "Context-Type: text/html:3:)"...
