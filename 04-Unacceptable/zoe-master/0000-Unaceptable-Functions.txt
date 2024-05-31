@@ -1,0 +1,47 @@
+1. Copy Entry point in binding.c
+
+Below
+loadBinding(lib, "ISUNACCEPTABLEZ", "i", &isunacceptableWrapperZ); // CHANGED
+
+make a changed copy
+
+2. Make a new accepter
+
+further'up' the file, copy:
+
+ReturnObject *isunacceptableWrapperZ(struct scopeobject *scope)........
+
+
+CHANGE THE NAMES of
+isunacceptableWrapperZ
+ISUNACCEPTABLEZ
+
+3. Change the 'include' file
+(unacceptable.c , unacceptable.h)
+
+to .h file:
+int unacceptable_basisZ(int);
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^YOUR NEW NANE
+
+in .c file:
+
+int unacceptable_basisZ(int j){
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^YOUR NEW NANE
+	j=1946;
+	printf ("Number Z\n");
+	return j;
+}
+
+NEXT TIME:
+
+1. Try to make a new unacceptable_basisXXX
+
+2. Play with the data type
+
+
+
+binding.c
+unacceptable.c
+unacceptable.h
+
+
