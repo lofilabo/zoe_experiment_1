@@ -2,7 +2,7 @@
 
 int unacceptable_basis1(int j){
 	j++;
-	printf ("This Is Unacceptable! (No.1 - The very first!!)\n");
+	printf ("Number 1 --- This Is Unacceptable! (No.1 - The very first!!)\n");
 	return j;
 }
 
@@ -26,7 +26,7 @@ int unacceptable_basis4(int j){
 }
 
 int unacceptable_basisZ(int j){
-	j=1946;
-	printf ("Number Z\n");
+	printf("You entered: %d \n", j);
+	j = j*10;
 	return j;
 }
