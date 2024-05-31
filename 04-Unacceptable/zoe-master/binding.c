@@ -17,6 +17,11 @@ ValueObject *getArg(struct scopeobject *scope, char *name)
 
 ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 {
+/* Prototype 1.  Modify for your use*/
+/*
+The call (one passing number) is like this:
+VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 3 MKAY
+*/
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
@@ -31,7 +36,7 @@ ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 {
-        ValueObject *arg1 = getArg(scope, "i");
+/* Prototype 2.  Modify for your use*/        ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
         // you can do whatever here
@@ -45,6 +50,7 @@ ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapper3(struct scopeobject *scope)
 {
+/* Prototype 3.  Modify for your use*/
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
@@ -59,6 +65,7 @@ ReturnObject *isunacceptableWrapper3(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapper4(struct scopeobject *scope)
 {
+/* Prototype 4.  Modify for your use*/
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
@@ -73,6 +80,7 @@ ReturnObject *isunacceptableWrapper4(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapperZ(struct scopeobject *scope)
 {
+/* PATTERN PROTOTYPE.  DO NOT MODIFY - COPY and use THE COPY */
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
@@ -81,6 +89,53 @@ ReturnObject *isunacceptableWrapperZ(struct scopeobject *scope)
 
         //ValueObject *ret = createIntegerValueObject(i);
         ValueObject *ret = createIntegerValueObject(z);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+
+ReturnObject *isunacceptableWrapperZZ1(struct scopeobject *scope)
+{
+
+
+
+
+/* PATTERN PROTOTYPE.  DO NOT MODIFY - COPY and use THE COPY */
+
+/*
+The call (more-than-one passing number) is like this:
+VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZ1 YR 1 AN YR 2 MKAY
+-------------2 OF THEM!!--------------^^^^^^^^^^^^^^^^^^^^
+*/
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+        int y = unacceptable_basisZZ1(i,j);
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+ReturnObject *isunacceptableWrapperZZ2(struct scopeobject *scope)
+{
+/* Feel Free to Modify */
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+        int y = unacceptable_basisZZ2(i,j);
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+ReturnObject *isunacceptableWrapperZZ3(struct scopeobject *scope)
+{
+/* Feel Free to Modify */
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+        int y = unacceptable_basisZZ3(i,j);
+	ValueObject *ret = createIntegerValueObject(y);
         return createReturnObject(RT_RETURN, ret);
 }
 
@@ -399,8 +454,20 @@ void loadLibrary(ScopeObject *scope, IdentifierNode *target)
         loadBinding(lib, "ISUNACCEPTABLE2", "i", &isunacceptableWrapper2); // CHANGED
         loadBinding(lib, "ISUNACCEPTABLE3", "i", &isunacceptableWrapper3); // CHANGED
         loadBinding(lib, "ISUNACCEPTABLE4", "i", &isunacceptableWrapper4); // CHANGED
-        loadBinding(lib, "ISUNACCEPTABLEZ", "i", &isunacceptableWrapperZ); // CHANGED
 
+        loadBinding(lib, "ISUNACCEPTABLEZ", "i", &isunacceptableWrapperZ); // PROTOTYPE TO COPY.  DO NOT MODIFY.
+
+        loadBinding(lib, "ISUNACCEPTABLEZZ1","i j", &isunacceptableWrapperZZ1); // PROTOTYPE TO COPY.  DO NOT MODIFY.
+        loadBinding(lib, "ISUNACCEPTABLEZZ2","i j", &isunacceptableWrapperZZ2); // MODIFY
+        loadBinding(lib, "ISUNACCEPTABLEZZ3","i j", &isunacceptableWrapperZZ3); // MODIFY
+	/* 
+	ABOVE: we must pass 2 things to ISUNACCEPTABLEZZ.
+	Convention is to put a SPACE between them
+	i.e  ISUNACCEPTABLEZZ","i j"
+	                         ^space
+	and not commas
+	
+	*/
         id = createIdentifierNode(IT_DIRECT, (void *)copyString("MYLIB"), NULL, NULL, 0); // CHANGED
         if (!id) goto loadLibraryAbort;
 
