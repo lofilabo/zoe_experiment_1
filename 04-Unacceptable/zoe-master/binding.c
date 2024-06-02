@@ -36,7 +36,8 @@ VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 3 MKAY
 
 ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 {
-/* Prototype 2.  Modify for your use*/        ValueObject *arg1 = getArg(scope, "i");
+/* Prototype 2.  Modify for your use*/        
+	ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
         // you can do whatever here
@@ -134,7 +135,64 @@ ReturnObject *isunacceptableWrapperZZ3(struct scopeobject *scope)
         ValueObject *arg2 = getArg(scope, "j");
         int i = getInteger(arg1);
 	int j = getInteger(arg2);
-        int y = unacceptable_basisZZ3(i,j);
+	int y = unacceptable_basisZZ3(i,j);
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+ReturnObject *isunacceptableWrapperZZZ1(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        ValueObject *arg3 = getArg(scope, "k");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+	int k = getInteger(arg3);
+        int y = unacceptable_basisZZZ1(i,j,k);
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+ReturnObject *isunacceptableWrapperZZZ2(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        ValueObject *arg3 = getArg(scope, "k");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+	int k = getInteger(arg3);
+        int y = unacceptable_basisZZZ2(i,j,k);
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        ValueObject *arg3 = getArg(scope, "k");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+	int k = getInteger(arg3);
+
+        int y = unacceptable_basisZZZ3(i,j,k);
+        /* char y = unacceptable_basisZZZ3(i,j,k); */
+
+	ValueObject *ret = createIntegerValueObject(y);
+        return createReturnObject(RT_RETURN, ret);
+}
+
+
+ReturnObject *isunacceptableWrapperZZZbase(struct scopeobject *scope)
+{
+/* Feel Free to Modify */
+        ValueObject *arg1 = getArg(scope, "i");
+        ValueObject *arg2 = getArg(scope, "j");
+        ValueObject *arg3 = getArg(scope, "k");
+        int i = getInteger(arg1);
+	int j = getInteger(arg2);
+	int k = getInteger(arg3);
+        int y = unacceptable_basisZZZbase(i,j,k);
 	ValueObject *ret = createIntegerValueObject(y);
         return createReturnObject(RT_RETURN, ret);
 }
@@ -460,6 +518,11 @@ void loadLibrary(ScopeObject *scope, IdentifierNode *target)
         loadBinding(lib, "ISUNACCEPTABLEZZ1","i j", &isunacceptableWrapperZZ1); // PROTOTYPE TO COPY.  DO NOT MODIFY.
         loadBinding(lib, "ISUNACCEPTABLEZZ2","i j", &isunacceptableWrapperZZ2); // MODIFY
         loadBinding(lib, "ISUNACCEPTABLEZZ3","i j", &isunacceptableWrapperZZ3); // MODIFY
+
+        loadBinding(lib, "ISUNACCEPTABLEZZZbase","i j k", &isunacceptableWrapperZZZbase); // MODIFY
+        loadBinding(lib, "ISUNACCEPTABLEZZZ1","i j k", &isunacceptableWrapperZZZ1); // MODIFY
+        loadBinding(lib, "ISUNACCEPTABLEZZZ2","i j k", &isunacceptableWrapperZZZ2); // MODIFY
+        loadBinding(lib, "ISUNACCEPTABLEZZZ3","i j k", &isunacceptableWrapperZZZ3); // MODIFY
 	/* 
 	ABOVE: we must pass 2 things to ISUNACCEPTABLEZZ.
 	Convention is to put a SPACE between them
