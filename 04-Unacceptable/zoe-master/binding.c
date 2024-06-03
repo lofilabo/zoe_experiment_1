@@ -14,6 +14,23 @@ ValueObject *getArg(struct scopeobject *scope, char *name)
 
 
 
+/*
+Back-Copy
+ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        int i = getInteger(arg1);
+
+        // you can do whatever here
+        int z = unacceptable_basis1(i);
+
+        //ValueObject *ret = createIntegerValueObject(i);
+        ValueObject *ret = createIntegerValueObject(z);
+        return createReturnObject(RT_RETURN, ret);
+}
+*/
+
+
 
 ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 {
@@ -22,13 +39,25 @@ ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 The call (one passing number) is like this:
 VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 3 MKAY
 */
+
+/*
+REF:
+ReturnObject *iopenWrapper(struct scopeobject *scope)
+	ValueObject *arg1 = getArg(scope, "addr");
+	char *addr = getString(castStringImplicit(arg1, scope));
+	
+	inet_host_t *h = malloc(sizeof(inet_host_t));
+	inet_open(h, IN_PROT_TCP, addr, port);
+
+	ValueObject *ret = createBlobValueObject(h);
+	return createReturnObject(RT_RETURN, ret);
+*/
+
         ValueObject *arg1 = getArg(scope, "i");
-        int i = getInteger(arg1);
+	char *addr = getString(castStringImplicit(arg1, scope));
 
-        // you can do whatever here
-        int z = unacceptable_basis1(i);
+        int z = unacceptable_basis1(addr);
 
-        //ValueObject *ret = createIntegerValueObject(i);
         ValueObject *ret = createIntegerValueObject(z);
         return createReturnObject(RT_RETURN, ret);
 }
