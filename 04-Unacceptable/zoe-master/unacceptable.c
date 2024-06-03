@@ -7,22 +7,21 @@ VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 1 MKAY
 -------------------------------------^^^^^ 1 value
 */
 
-/*int unacceptable_basis1(int j){*/
 int unacceptable_basis1(char* j){
-/*
-state-of-play:
-we get 'something' into j.
-it 'should' be 'abc'
-*/
 	printf ("Number 1 --- This Is Unacceptable! (No.1 - The very first!!)\n");
-	//printf("name = %p\n", j );
-	printf("%s",j);
-	//printf("Input From C: %d \n", j);
-	int rtn = 77;
+	printf("%s\n",j);
+	printf("Input From C: %s\n", j);
+	char greetings[] = "Hello World!";
+	int rtn = 111;
 	return rtn;
 }
 
-
+/* Backup 
+int unacceptable_basis2(int j){
+	printf ("Number 2\n");
+	return j;
+}
+*/
 int unacceptable_basis2(int j){
 /*char unacceptable_basis2(int j){*/
 	printf ("Number 2\n");

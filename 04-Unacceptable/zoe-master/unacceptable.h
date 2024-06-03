@@ -4,8 +4,8 @@
 int unacceptable_basis1(char*);
 
 /* 2 - To-be-Changed */
-int unacceptable_basis2(int);
-/*char unacceptable_basis2(int);*/
+int unacceptable_basis2(int); 
+/* char *unacceptable_basis2(int); */ 
 
 
 int unacceptable_basis3(int);

@@ -55,9 +55,7 @@ ReturnObject *iopenWrapper(struct scopeobject *scope)
 
         ValueObject *arg1 = getArg(scope, "i");
 	char *addr = getString(castStringImplicit(arg1, scope));
-
         int z = unacceptable_basis1(addr);
-
         ValueObject *ret = createIntegerValueObject(z);
         return createReturnObject(RT_RETURN, ret);
 }
@@ -65,8 +63,15 @@ ReturnObject *iopenWrapper(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 {
-/* Prototype 2.  Modify for your use*/        
-	ValueObject *arg1 = getArg(scope, "i");
+/* Prototype 2.  Modify for your use
+
+Tomorrow!!
+
+Look at lines 251
+char
+createStringValueObject
+*/        
+        ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
 
         // you can do whatever here
