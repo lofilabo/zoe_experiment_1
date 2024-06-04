@@ -11,7 +11,7 @@ TLDR
 
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "From Zoe again..." MKAY
 	BTW visible is the things that shows the 'returned' message!
-  VISIBLE "===================================="
+  	VISIBLE "===================================="
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE2 YR 2 MKAY
 
 OBTW

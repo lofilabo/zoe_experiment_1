@@ -1,11 +1,13 @@
 #include <stdio.h>
 /* 1 - Changed */
 /*int unacceptable_basis1(int);*/
+/* Accepts a String */
 int unacceptable_basis1(char*);
 
-/* 2 - To-be-Changed */
-int unacceptable_basis2(int); 
-/* char *unacceptable_basis2(int); */ 
+/* 2 - Changed */
+/* int unacceptable_basis2(int); */ 
+/* Returns a String */
+char* unacceptable_basis2(int);  
 
 
 int unacceptable_basis3(int);

@@ -120,8 +120,18 @@
 
 #define READSIZE 512
 
-static char *program_name;
 
+/*new*/
+int GLOBAL_a, GLOBAL_b, GLOBAL_c, GLOBAL_d, GLOBAL_e; // global variables
+
+char * GLOBAL_CHAR_1;
+char * GLOBAL_CHAR_2;
+char * GLOBAL_CHAR_3;
+char * GLOBAL_CHAR_4;
+char * GLOBAL_CHAR_5;
+/*/new*/
+
+static char *program_name;
 static char *shortopt = "hvi";
 static struct option longopt[] = {
 	{ "help", no_argument, NULL, (int)'h' },
@@ -182,6 +192,10 @@ int main(int argc, char **argv)
 
 	char *revision = "v0.00.1";
 	program_name = argv[0];
+
+GLOBAL_a=7;
+GLOBAL_b=5;
+GLOBAL_CHAR_1="GV";
 
 	while ((ch = getopt_long(argc, argv, shortopt, longopt, NULL)) != -1) {
 		switch (ch) {

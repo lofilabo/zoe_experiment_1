@@ -3,6 +3,20 @@
 #include "inet.h"  /* for sockets */
 #include "unacceptable.h"
 
+/*new -- and -- do not need right now*/
+/*
+
+int GLOBAL_a, GLOBAL_b, GLOBAL_c, GLOBAL_d, GLOBAL_e; // global variables
+
+char * GLOBAL_CHAR_1;
+char * GLOBAL_CHAR_2;
+char * GLOBAL_CHAR_3;
+char * GLOBAL_CHAR_4;
+char * GLOBAL_CHAR_5;
+
+char back[40];
+*/
+
 ValueObject *getArg(struct scopeobject *scope, char *name)
 {
 	IdentifierNode *id = createIdentifierNode(IT_DIRECT, (void *)copyString(name), NULL, NULL, 0);
@@ -75,10 +89,34 @@ createStringValueObject
         int i = getInteger(arg1);
 
         // you can do whatever here
-        int z = unacceptable_basis2(i);
+        char* z = unacceptable_basis2(i);
+	puts (z);  //<<<<<-----------GETTING VAR BACK?????????????????????
+	puts("--INSIDE  bindings.c ");
+	//puts(GLOBAL_CHAR_1);
 
-        //ValueObject *ret = createIntegerValueObject(i);
-        ValueObject *ret = createIntegerValueObject(z);
+/*
+	char *h = inet_lookup(addr);
+
+	ValueObject *ret = createStringValueObject(h);
+	return createReturnObject(RT_RETURN, ret);
+*/
+	char *h = "hello";
+        //ValueObject *ret = createStringValueObject(GLOBAL_CHAR_1);
+	//ValueObject *ret = createIntegerValueObject(GLOBAL_CHAR_1);
+	
+	
+	//ValueObject *ret = createStringValueObject( h  );
+
+
+        //ValueObject *ret = createStringValueObject(back);
+	//ValueObject *ret = createStringValueObject(h);
+
+        //ValueObject *ret = createIntegerValueObject("1");
+	//char *h = "3";
+	//ValueObject *ret = createStringValueObject(h);
+        ValueObject *ret = createIntegerValueObject(1);
+	puts("--LEAVING bindings.c ");
+
         return createReturnObject(RT_RETURN, ret);
 }
 

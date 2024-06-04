@@ -120,6 +120,8 @@
 
 #define READSIZE 512
 
+int a, b; // global variables
+
 static char *program_name;
 
 static char *shortopt = "hvi";
