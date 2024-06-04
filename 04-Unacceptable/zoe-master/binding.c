@@ -3,19 +3,6 @@
 #include "inet.h"  /* for sockets */
 #include "unacceptable.h"
 
-/*new -- and -- do not need right now*/
-/*
-
-int GLOBAL_a, GLOBAL_b, GLOBAL_c, GLOBAL_d, GLOBAL_e; // global variables
-
-char * GLOBAL_CHAR_1;
-char * GLOBAL_CHAR_2;
-char * GLOBAL_CHAR_3;
-char * GLOBAL_CHAR_4;
-char * GLOBAL_CHAR_5;
-
-char back[40];
-*/
 
 ValueObject *getArg(struct scopeobject *scope, char *name)
 {
@@ -26,46 +13,9 @@ ValueObject *getArg(struct scopeobject *scope, char *name)
 }
 
 
-
-
-/*
-Back-Copy
-ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
-{
-        ValueObject *arg1 = getArg(scope, "i");
-        int i = getInteger(arg1);
-
-        // you can do whatever here
-        int z = unacceptable_basis1(i);
-
-        //ValueObject *ret = createIntegerValueObject(i);
-        ValueObject *ret = createIntegerValueObject(z);
-        return createReturnObject(RT_RETURN, ret);
-}
-*/
-
-
-
 ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 {
 /* Prototype 1.  Modify for your use*/
-/*
-The call (one passing number) is like this:
-VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 3 MKAY
-*/
-
-/*
-REF:
-ReturnObject *iopenWrapper(struct scopeobject *scope)
-	ValueObject *arg1 = getArg(scope, "addr");
-	char *addr = getString(castStringImplicit(arg1, scope));
-	
-	inet_host_t *h = malloc(sizeof(inet_host_t));
-	inet_open(h, IN_PROT_TCP, addr, port);
-
-	ValueObject *ret = createBlobValueObject(h);
-	return createReturnObject(RT_RETURN, ret);
-*/
 
         ValueObject *arg1 = getArg(scope, "i");
 	char *addr = getString(castStringImplicit(arg1, scope));
@@ -77,47 +27,13 @@ ReturnObject *iopenWrapper(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 {
-/* Prototype 2.  Modify for your use
-
-Tomorrow!!
-
-Look at lines 251
-char
-createStringValueObject
-*/        
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
-
-        // you can do whatever here
         char* z = unacceptable_basis2(i);
 	puts (z);  //<<<<<-----------GETTING VAR BACK?????????????????????
-	puts("--INSIDE  bindings.c ");
-	//puts(GLOBAL_CHAR_1);
-
-/*
-	char *h = inet_lookup(addr);
-
-	ValueObject *ret = createStringValueObject(h);
-	return createReturnObject(RT_RETURN, ret);
-*/
 	char *h = "hello";
-        //ValueObject *ret = createStringValueObject(GLOBAL_CHAR_1);
-	//ValueObject *ret = createIntegerValueObject(GLOBAL_CHAR_1);
-	
-	
-	//ValueObject *ret = createStringValueObject( h  );
-
-
-        //ValueObject *ret = createStringValueObject(back);
-	//ValueObject *ret = createStringValueObject(h);
-
-        //ValueObject *ret = createIntegerValueObject("1");
-	//char *h = "3";
-	//ValueObject *ret = createStringValueObject(h);
         ValueObject *ret = createIntegerValueObject(1);
-	puts("--LEAVING bindings.c ");
-
-        return createReturnObject(RT_RETURN, ret);
+	return createReturnObject(RT_RETURN, ret);
 }
 
 

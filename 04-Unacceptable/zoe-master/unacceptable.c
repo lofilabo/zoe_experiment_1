@@ -5,72 +5,52 @@ Start.
 Notice:
 VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR 1 MKAY
 -------------------------------------^^^^^ 1 value
+and
+VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZbase YR 31 AN YR 32 AN YR 33 MKAY
+-------------------------------------------^^^^^^^^^^^^^^^^^^^^^^^ 3 values
 */
 
-/*new -- and -- do not need right now*/
+
+
+
 /*
-int GLOBAL_a, GLOBAL_b, GLOBAL_c, GLOBAL_d, GLOBAL_e; // global variables
-
-char * GLOBAL_CHAR_1;
-char * GLOBAL_CHAR_2;
-char * GLOBAL_CHAR_3;
-char * GLOBAL_CHAR_4;
-char * GLOBAL_CHAR_5;
-
-char back[40];
+1.
+THIS ACCEPTS!
+<<<<<<<<<<<<<<<--------------INTO HERE
+Test Passing (accepting a char)
+called like this:
+VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "This text is located in >>unacceptable<<" MKAY
 */
-
 int unacceptable_basis1(char* j){
 	printf ("Number 1 --- This Is Unacceptable! (No.1 - The very first!!)\n");
 	printf("%s\n",j);
-	printf("Input From C: %s\n", j);
+	printf("Message SENT HERE  >>unacceptable.c<< TO Zoe %s\n", j);
 	char greetings[] = "Hello World!";
-	int rtn = 111;
+	int rtn = 0; //this is shown 
+
 	return rtn;
 }
 
-/* Backup 
-int unacceptable_basis2(int j){
-	printf ("Number 2\n");
-	return j;
-}
+
+
+
+/*
+2.
+THIS SENDS!
+>>>>>>>>>>>>>>---------------OUT OF HERE
+Test Returning (return a char)
+called like this:
+VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE2 YR 2 MKAY
 */
 char* unacceptable_basis2(int j){
-/*char unacceptable_basis2(int j){*/
-	printf ("Number 2\n");
-	printf ("Entering unacceptable.c\n");
-	//NEXT: Assign a 'string' to GLOBAL_CHAR_1
-	/*
-	GLOBAL_CHAR_1 is Global Variabe.
-	DECLARE in main.c
-	CHANGE  int
-	AND DO NOT FORGET TO DECLARE HERE!!
-	*/
-
-//	char* return_string = "Blurgh"; 
-//	return 1;	
-	char str[] = "a,AAAy;b,BBBeee;c,Seeee";
-	//strcpy(GLOBAL_CHAR_1, "ab");
-	//GLOBAL_CHAR_1 = "In Global But Elswhere!";
-
-
-/*Cheesy!!  Return using a text file!!*/
-	    char *filename = "out01.txt";
-	    FILE *fp = fopen(filename, "w");
-	    for (int i = 0; i < 10; i++)
-		fprintf(fp, "This is the line #%d\n", i + 1);
-
-	    fclose(fp);
-/*end of cheese*/
-
-
-
-
-
-//	return back;
-	printf ("Leaving unacceptable.c\n");
-	return "This is sent back from unacceptable.c and shown by Zoe";//<<<<<-----------SENDING VAR BACK?????????????????????
+	printf ("Number 2: ENTERING unacceptable.c\n");
+	char* str = "CHANGED In: >>unacceptable.c<< and shown FROM Zoe";
+	return str;
 }
+
+
+
+
 
 
 int unacceptable_basis3(int j){

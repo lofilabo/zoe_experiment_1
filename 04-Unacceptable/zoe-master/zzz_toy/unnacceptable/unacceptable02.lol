@@ -1,17 +1,18 @@
 HAI 1.4
   CAN HAS MYLIB?
   BTW somewhat verbose syntax, but easy to implement
-  VISIBLE "===================================="
+  VISIBLE " "
+  VISIBLE " "
 
-VISIBLE "Find a way to move a letter"
-	
 OBTW
   ...................
 TLDR
-
-	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "From Zoe again..." MKAY
+	BTW Going INTO the server
+	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "This text is located in >>unacceptable<<" MKAY
 	BTW visible is the things that shows the 'returned' message!
-  	VISIBLE "===================================="
+  	VISIBLE " "
+
+	BTW Coming OUT of the server
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE2 YR 2 MKAY
 
 OBTW
