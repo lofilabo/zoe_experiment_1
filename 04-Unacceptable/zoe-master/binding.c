@@ -25,6 +25,26 @@ ReturnObject *isunacceptableWrapper1(struct scopeobject *scope)
 }
 
 
+ReturnObject *isunacceptableWrapper2__EXPT(struct scopeobject *scope)
+{
+        ValueObject *arg1 = getArg(scope, "i");
+        int i = getInteger(arg1);
+        char* z = unacceptable_basis2(i);
+	puts (z);  //<<<<<-----------GETTING VAR BACK?????????????????????
+	char *h = "hello";
+
+
+	char *data = "hello";
+	int len = 5;
+	data[len] = '\0';
+
+	//ValueObject *ret = createStringValueObject(data); /* this does the correct thing, but breaks */
+        //ValueObject *ret = createArrayValueObject("aaabbb"); /* this does a number....but not a word */
+        ValueObject *ret = createIntegerValueObject(i);
+	return createReturnObject(RT_RETURN, ret);
+}
+
+
 ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 {
         ValueObject *arg1 = getArg(scope, "i");
@@ -40,13 +60,10 @@ ReturnObject *isunacceptableWrapper2(struct scopeobject *scope)
 ReturnObject *isunacceptableWrapper3(struct scopeobject *scope)
 {
 /* Prototype 3.  Modify for your use*/
+
         ValueObject *arg1 = getArg(scope, "i");
         int i = getInteger(arg1);
-
-        // you can do whatever here
         int z = unacceptable_basis3(i);
-
-        //ValueObject *ret = createIntegerValueObject(i);
         ValueObject *ret = createIntegerValueObject(z);
         return createReturnObject(RT_RETURN, ret);
 }
@@ -156,18 +173,102 @@ ReturnObject *isunacceptableWrapperZZZ2(struct scopeobject *scope)
 
 ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
 {
+
+	/*
+        ValueObject *arg1 = getArg(scope, "i");
+        int i = getInteger(arg1);
+        char* z = unacceptable_basis2(i);
+	puts (z);  //<<<<<-----------GETTING VAR BACK?????????????????????
+	char *h = "hello";
+        ValueObject *ret = createIntegerValueObject(1);
+	return createReturnObject(RT_RETURN, ret);
+
+	*/
+
         ValueObject *arg1 = getArg(scope, "i");
         ValueObject *arg2 = getArg(scope, "j");
         ValueObject *arg3 = getArg(scope, "k");
-        int i = getInteger(arg1);
-	int j = getInteger(arg2);
+        char* i = getInteger(arg1);//<<<<<<<<<<<<<<<<<<<<<<<< int here
+	char* j = getInteger(arg2);
 	int k = getInteger(arg3);
 
-        int y = unacceptable_basisZZZ3(i,j,k);
+        char* aaa = unacceptable_basisZZZ3(i,j,k);
         /* char y = unacceptable_basisZZZ3(i,j,k); */
+	
+	//printf("aaa :%s\n",aaa);
+	
+	/*
 
-	ValueObject *ret = createIntegerValueObject(y);
+
+	*/	/*
+		WORK-AROUND
+		we can use this method to Return data if necessary.
+		*/
+		char *filename = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZout01.txt";
+		int q=77;
+		FILE *fp = fopen(filename, "w");
+		for (int i = 0; i < 3; i++)
+			fprintf(fp, "This is the line #%d\n", q);
+
+		fclose(fp);
+
+	//const char *rdata = "test";
+	/*
+	char *rdata = "";
+	int rlen = 1;
+	rdata[rlen] = '\0';
+
+	Currently Test.  If it causes trouble, fall back on FALLBACK
+	THIS IS A RISK
+
+	OPTION 1
+	ValueObject *ret = createStringValueObject(rdata);
+
+	OPTION 2
+	ValueObject *ret = createStringValueObject("");
+	*/
+
+	/*
+	OPTION 3
+	Keep to one side for fallback
+	****
+	USE THIS TO RETURN SAFELY
+	FALLBACK
+	ValueObject *ret = createIntegerValueObject(aaa);
+
+	This behaves at the moment.
+	Does not Stack Overflow, and returns.....a big number
+	*/
+	ValueObject *ret = createIntegerValueObject(aaa);
+	/*
+	we will use WORK-AROUND to 'return' the result :(
+	*/
         return createReturnObject(RT_RETURN, ret);
+
+/*
+End-of-day
+Did not succeed in returning string.
+>>let's try saving in a file.....
+
+Experimented with createStringValueObject
+Do this again!!
+
+Currently stuck to createIntegerValueObject
+
+*/
+/*
+
+IN FUTURE, study this
+Try to get a way to Return a string!!
+	char *data = "hello";
+	int len = 8;
+	data[len] = '\0';
+
+	ValueObject *ret = createStringValueObject(data);
+
+        //ValueObject *ret = createArrayValueObject("aaabbb");
+	return createReturnObject(RT_RETURN, ret);
+*/
 }
 
 
@@ -507,7 +608,7 @@ void loadLibrary(ScopeObject *scope, IdentifierNode *target)
         loadBinding(lib, "ISUNACCEPTABLEZZ2","i j", &isunacceptableWrapperZZ2); // MODIFY
         loadBinding(lib, "ISUNACCEPTABLEZZ3","i j", &isunacceptableWrapperZZ3); // MODIFY
 
-        loadBinding(lib, "ISUNACCEPTABLEZZZbase","i j k", &isunacceptableWrapperZZZbase); // MODIFY
+        loadBinding(lib, "ISUNACCEPTABLEZZZbase","i j k", &isunacceptableWrapperZZZbase); // PROTOTYPE TO COPY.  DO NOT MODIFY.
         loadBinding(lib, "ISUNACCEPTABLEZZZ1","i j k", &isunacceptableWrapperZZZ1); // MODIFY
         loadBinding(lib, "ISUNACCEPTABLEZZZ2","i j k", &isunacceptableWrapperZZZ2); // MODIFY
         loadBinding(lib, "ISUNACCEPTABLEZZZ3","i j k", &isunacceptableWrapperZZZ3); // MODIFY

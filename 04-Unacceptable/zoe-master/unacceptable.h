@@ -23,7 +23,7 @@ int unacceptable_basisZZ3(int,int);
 int unacceptable_basisZZZbase(int,int,int);
 int unacceptable_basisZZZ1(int,int,int);
 int unacceptable_basisZZZ2(int,int,int);
-int unacceptable_basisZZZ3(int,int,int);
+char* unacceptable_basisZZZ3(char*,char*,int);//<<<<<<<<<<<<<<<<<<<<<<<< int here
 
 /*char unacceptable_basisZZZ3(int,int,int);*/
 

@@ -6,14 +6,21 @@ HAI 1.4
 
 OBTW
   ...................
-TLDR
+
 	BTW Going INTO the server
-	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "This text is located in >>unacceptable<<" MKAY
+	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "New Text Passed" MKAY
 	BTW visible is the things that shows the 'returned' message!
   	VISIBLE " "
 
-	BTW Coming OUT of the server
+
+  	VISIBLE ""
+  	VISIBLE ""	BTW Coming OUT of the server
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE2 YR 2 MKAY
+  	VISIBLE ""
+  	VISIBLE ""
+
+TLDR
+
 
 OBTW
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE3 YR 3 MKAY
@@ -35,6 +42,16 @@ OBTW
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZbase YR 31 AN YR 32 AN YR 33 MKAY
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ1 YR 31 AN YR 32 AN YR 33 MKAY
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ2 YR 41 AN YR 42 AN YR 43 MKAY
-	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ3 YR 51 AN YR 52 AN YR 53 MKAY
+
+  	VISIBLE ""
+  	VISIBLE ""
+  	VISIBLE ""
+
+
+
 TLDR
+BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	VISIBLE "Starting.........."
+	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ3 YR "id,data;id,data" AN YR "," AN YR 1 MKAY
+BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 KTHXBYE
