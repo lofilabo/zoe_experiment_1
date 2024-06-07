@@ -1,0 +1,8 @@
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/install/strip.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/install/local.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/install.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/list_install_components.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/rebuild_cache.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/edit_cache.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/test.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/03/zoe-master/CMakeFiles/zoe.dir
