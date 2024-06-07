@@ -160,112 +160,55 @@ char* unacceptable_basisZZZ3(int j, int k, int l){
 
 char* unacceptable_basisZZZ3(char* j, char* k, int l){//<<<<<<<<<<<<<<<<<<<<<<<< int here
 
-	/*accept section*/
-
+/*
+Useful during development
 	printf("ACCEPTING and RETURNING:%s\n",j);
-	printf("Incoming 1:%s\n",j);
-	printf("Incoming 2:%s\n",k);
+	printf("Incoming 1:%s\n", j);
+	printf("Incoming 2:%s\n", k);
 	printf("Incoming 3:%d\n", l);
+*/
+
 
 	/*
 	Do the important work
 	j - 1 - line
 	k - 2 - divider
 	l - 3 - front or back (0 for front, other number for back)
-
 	*/
 	char strWorkingCopy1[50];
 	strcpy(strWorkingCopy1, j);	
-
 	char strWorkingCopy2[50];
 	strcpy(strWorkingCopy2, j);
 
-/*
-printf( j );
-printf("\n");
-printf("\n");
-printf("\n");
-printf("INFO:\n");
-printf( strWorkingCopy1 );
-printf("\n");
-printf( strWorkingCopy2 );
-printf("\n");
-*/
-
-	char devChar[20];
-	char *token;
+	//char devChar[20];
+	char *token = "Contents of Token";
 	printf("\n");
+
+
+	char *filename = "zoejamie.txt";/*Open file*/
+	
+	int q=01;
+	FILE *fp = fopen(filename, "w");
 
 	if( l == 0 ){
 		char *ptr;
 		ptr = strchr(strWorkingCopy1, *k);
 		memmove(ptr, ptr+1, strlen(ptr));
-		printf("ZRO 0 >>>>>>>>>>   %s\n",ptr);
-
+		printf("ZRO (left-over) 0 >   %s\n",ptr);
+		fprintf(fp,  ptr);/*write into file*/
 	}else{
-/*
-		printf("THE ONE WE WANT NOW\n");
-		printf( strWorkingCopy2 );
-		printf("\n");
-*/
-		/*test
-		Start Here Tomorrow!
-		*/
-
-/*
-	   char stringz[50] = "Hello world";
-	   // Extract the first token
-	   char * tokenz = strtok(stringz, " ");
-	   printf( "%s\n", tokenz ); //printing the token		
-*/
-	   char stringz[50] = "Hello;world,Hithere;you";
-/*
-	printf("\n");
-	printf(stringz);
-	printf("\n");
-	printf(strWorkingCopy2);
-	printf("\n");
-*/	   
-	   // Extract the first token
-	   char * tokenz = strtok(strWorkingCopy2, k);
-	   printf( "ONE 1>>>>>>>>>>   %s\n", tokenz ); //printing the token
+	   	char stringz[50] = "";
+	   	// Extract the first token
+	   	char * tokenz = strtok(strWorkingCopy2, k);
+	   	printf( "ONE (selected ) 1>   %s\n", tokenz ); //printing the token
+		fprintf(fp,  tokenz);/*write into file*/
 	}
 	printf("\n");
 
-	/* return section */
-/*
-	char* strynge = "Return Message";
-	printf("From Back-End: %s\n",strynge);
-	return strynge;
-*/
+	//char* str = " actual data is 4 dots abover....";
+	char* str = token;
+	fclose(fp);/*Close file*/
 
-/*
-	printf ("=============================\n");
-	printf ("RETURNING\n");
-
-
-	printf ("Number ZZZ3: ENTERING unacceptable.c\n");
-	printf ("RETURNING\n");
-*/
-	char* str = "C!!.";
-
-/*
-
-T O M O R R O W ! ! !
-
-Tidy Up this!!
-
-FOR NOW
-we must use a differet method to RETURN information.
-
-Let's try saving in files.
-
-char *filename = "out01.txt";
-FILE *fp = fopen(filename, "w");
-fprintf(fp, "This is the line #%d\n", 444);
-fclose(fp);
-
-*/
 
 	return str;
 

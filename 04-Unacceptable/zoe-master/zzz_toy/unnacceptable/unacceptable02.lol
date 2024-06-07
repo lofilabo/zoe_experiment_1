@@ -1,11 +1,17 @@
 HAI 1.4
   CAN HAS MYLIB?
   BTW somewhat verbose syntax, but easy to implement
-  VISIBLE " "
-  VISIBLE " "
+  VISIBLE "................................................................................. "
+
+
+
+
+
 
 OBTW
   ...................
+
+
 
 	BTW Going INTO the server
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE1 YR "New Text Passed" MKAY
@@ -18,8 +24,9 @@ OBTW
 	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLE2 YR 2 MKAY
   	VISIBLE ""
   	VISIBLE ""
-
 TLDR
+
+
 
 
 OBTW
@@ -50,8 +57,23 @@ OBTW
 
 
 TLDR
-BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	VISIBLE "Starting.........."
-	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ3 YR "id,data;id,data" AN YR "," AN YR 1 MKAY
-BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ3 YR "id1,data1;id2,data2;id3,data3" AN YR ";" AN YR 0 MKAY
+	VISIBLE I IZ MYLIB'Z ISUNACCEPTABLEZZZ3 YR "id1,data1;id2,data2;id3,data3" AN YR ";" AN YR 1 MKAY
+BTW YOU WANT TO BE HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!       ^  !!!!!!!
+BTW                                                                                Change 0 or 1 >>
+  VISIBLE ".................................................................................................."
+
+
+
+
+
+
+
 KTHXBYE

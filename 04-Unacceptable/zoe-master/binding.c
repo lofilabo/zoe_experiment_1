@@ -4,6 +4,7 @@
 #include "unacceptable.h"
 
 
+
 ValueObject *getArg(struct scopeobject *scope, char *name)
 {
 	IdentifierNode *id = createIdentifierNode(IT_DIRECT, (void *)copyString(name), NULL, NULL, 0);
@@ -193,6 +194,12 @@ ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
 	int k = getInteger(arg3);
 
         char* aaa = unacceptable_basisZZZ3(i,j,k);
+        /*
+        //PLEASE KEEP THIS for future reference
+        printf(">From Here> aaa => ");
+        printf(aaa);
+	*/
+
         /* char y = unacceptable_basisZZZ3(i,j,k); */
 	
 	//printf("aaa :%s\n",aaa);
@@ -200,17 +207,10 @@ ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
 	/*
 
 
-	*/	/*
-		WORK-AROUND
-		we can use this method to Return data if necessary.
-		*/
-		char *filename = "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZout01.txt";
-		int q=77;
-		FILE *fp = fopen(filename, "w");
-		for (int i = 0; i < 3; i++)
-			fprintf(fp, "This is the line #%d\n", q);
+	/*
+	11111: RETURN HERE
+	*/
 
-		fclose(fp);
 
 	//const char *rdata = "test";
 	/*
@@ -222,10 +222,16 @@ ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
 	THIS IS A RISK
 
 	OPTION 1
+	***In the future.....experiment with this
 	ValueObject *ret = createStringValueObject(rdata);
 
 	OPTION 2
+	***In the future.....experiment with this
 	ValueObject *ret = createStringValueObject("");
+
+	Right now, no moving of data.
+	"Segmentation fault (core dumped)"
+
 	*/
 
 	/*
@@ -238,7 +244,28 @@ ReturnObject *isunacceptableWrapperZZZ3(struct scopeobject *scope)
 
 	This behaves at the moment.
 	Does not Stack Overflow, and returns.....a big number
+
+
+	Previously (elswhere this file!) we have this:
+	EXAMPLE.
+		char *data = malloc(sizeof(char) * (amount + 1));
+		int len = inet_receive(remote, local, data, amount, -1);
+		data[len] = '\0';
+
+		ValueObject *ret = createStringValueObject(data);	
+
+	How do we start malloc of our own?
+
+	Maybe like this:
+
+		char *array;
+		int size;
+		array=(*char)malloc (size);	
+	....Tomorrow!
+
 	*/
+	
+
 	ValueObject *ret = createIntegerValueObject(aaa);
 	/*
 	we will use WORK-AROUND to 'return' the result :(
