@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/unacceptable.c
+unacceptable.h
+/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/unacceptable.h
+stdio.h
+-
+string.h
+-
+
+/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/unacceptable.h
+stdio.h
+-
+
