@@ -186,7 +186,7 @@ Useful during development
 
 
 	char *filename = "zoejamie.txt";/*Open file*/
-	
+
 	int q=01;
 	FILE *fp = fopen(filename, "w");
 
@@ -211,6 +211,18 @@ Useful during development
 
 
 	return str;
+
+
+/*
+But....
+This workes on No.2!! [ unacceptable_basis2 ----- top of this file]
+
+
+	char* str = "Blurgh.";
+	return str;
+
+
+*/
 
 }
 
