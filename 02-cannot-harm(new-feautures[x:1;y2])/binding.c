@@ -3,7 +3,7 @@
 #include "inet.h"  /* for sockets */
 #include "unacceptable.h"
 
-
+int ccc = 0;
 
 ValueObject *getArg(struct scopeobject *scope, char *name)
 {

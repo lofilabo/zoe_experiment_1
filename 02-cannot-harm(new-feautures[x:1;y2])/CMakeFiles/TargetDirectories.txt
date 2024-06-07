@@ -1,8 +1,8 @@
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install/strip.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install/local.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/list_install_components.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/rebuild_cache.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/edit_cache.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/test.dir
-/home/richard/Documents/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/zoe.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install/strip.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install/local.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/install.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/list_install_components.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/rebuild_cache.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/edit_cache.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/test.dir
+/home/richard/Documents/GitHub/zoe_experiment_1/02-cannot-harm(new-feautures[x:1;y2])/CMakeFiles/zoe.dir
